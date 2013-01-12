@@ -29,7 +29,7 @@ digraph timeline {
 		fontsize = 24,
 		fontname = "CMU Typewriter Text",
 		shape = box,
-		style = rounded
+		style = "rounded,filled"
 	];
 	edge [
 		style = solid,
@@ -150,23 +150,24 @@ digraph timeline {
 		//...
 	}
 	{ rank=same; 2009
-		CoderTeam [ label = "Coder Team alapítása" ]
+		CoderTeam [ label = "Coder Team alapítása", fillcolor="#729fcf", fontcolor="#ffffff" ]
 	}
 	{ rank=same; 2010
-		//...
+		CoderAmoba [ label = "Amőba projekt", fillcolor="#729fcf", fontcolor="#ffffff" ]
+		CoderChaos [ label = "Chaos szerver", fillcolor="#729fcf", fontcolor="#ffffff" ]
 	}
 	{ rank=same; 2011
 		//...
 	}
 	{ rank=same; 2012
-		//...
+		CoderFractal [ label = "Fractal szerver", fillcolor="#729fcf", fontcolor="#ffffff" ]
+		CoderBBRC [ label = "RC autó projekt", fillcolor="#729fcf", fontcolor="#ffffff" ]
 	}
 	{ rank=same; jövő
 		VILAGURALOM [ label = "Világuralomra törés,\nemberiség leigázása" ]	
 	}
 	
-	// Csoport összekötések
-	KSZKAlapitas -> CoderTeam;
+	// KSZK események
 	KSZKAlapitas -> HASZNALAT;
 	KSZKAlapitas -> SEJTPROC -> SEJTPROC_TANF;
 	KSZKAlapitas -> NET1 -> NET2 -> NET3 ->NET4 ->NET5 ->NET6;
@@ -185,4 +186,10 @@ digraph timeline {
 	GEPEK -> BALU1 -> BALU2 -> BALU3 -> BALU4;
 	NET2 -> NETWATCHER;
 	NET5 -> SCHACC;
+	
+	// Coder Team események
+	CoderTeam -> CoderAmoba
+	CoderTeam -> CoderBBRC
+	CoderTeam -> CoderChaos -> CoderFractal
+	
 }
