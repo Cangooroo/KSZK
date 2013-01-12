@@ -4,8 +4,15 @@ digraph timeline {
 
 	// Évek
 	node [
-		fontsize = 32,
+		fontsize = 24,
+		fontname = "CMU Typewriter Text",
 		shape = plaintext
+	];
+	edge [
+		//color = "#888888",
+		style = dashed,
+		penwidth = 2,
+		arrowhead = none
 	];
 	1976 -> 1977 -> 1978 -> 1979 -> 1980 -> 1981;
 	1981 -> 1982 -> 1983 -> 1984 -> 1985 -> 1986;
@@ -18,8 +25,17 @@ digraph timeline {
 
 	// Események
 	node [
-		fontsize = 20,
-		shape = box
+		fontsize = 24,
+		fontname = "CMU Typewriter Text",
+		shape = box,
+		style = rounded
+	];
+	edge [
+		style = solid,
+		color = "#000000",
+		penwidth = 1,
+		arrowhead = normal,
+		arrowsize = 1,
 	];
 	// Események, évek szerint
 	{ rank=same; 1976
