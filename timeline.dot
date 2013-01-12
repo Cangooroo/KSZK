@@ -41,18 +41,20 @@ digraph timeline {
 	// Események, évek szerint
 	{ rank=same; 1976
 		KSZKAlapitas [ label = "KSZK Alapítása" ]
+		HASZNALAT [ label="Kollégisták által használható gépek" ]
 	}
 	{ rank=same; 1977
 		Ascote [ label = "Ascote lyukszalagíró" ]
+		EMG [ label = "EMG 666 beszerzése" ]
 	}
 	{ rank=same; 1978
-		R5_BASIC [ label = "R5 BASIC számítógépek beszerzése \n amit a kollégisták használhatnak" ]
+		R5_BASIC [ label = "R5 BASIC számítógépek beszerzése" ]
 	}
 	{ rank=same; 1979
 		R5_MEM [ label = "R5 memóriabővítés" ]
 	}
 	{ rank=same; 1980
-		//...
+		FAZIS1 [ label = "380V fázis projekt kezdete" ]
 	}
 	{ rank=same; 1981
 		KOLTOZES [ label = "Költözés" ]
@@ -62,18 +64,21 @@ digraph timeline {
 	}
 	{ rank=same; 1983
 		SEJTPROC [ label = "Sejtprocesszor beszerzése" ]
+		ZX81 [ label = "ZX81 beszerzése" ]	
 	}
 	{ rank=same; 1984
 		//...
 	}
 	{ rank=same; 1985
 		COMMODORE [ label = "Commodore 64 gépek\nbeszerzése" ]
+		FAZIS2 [ label = "380V projekt vége" ]
 	}
 	{ rank=same; 1986
 		//...
 	}
 	{ rank=same; 1987
 		SEJTPROC_TANF [ label = "\"Sejtprocesszor Szakkolégium\" \ntanfolyam indítása" ]
+		ZX_SPECTRUM [ label = "ZX SPECTRUM beszerzése" ]
 	}
 	{ rank=same; 1988
 		//...
@@ -82,13 +87,14 @@ digraph timeline {
 		NET1 [ label = "Koaxkábel hálózat kiépítése \n(10M)" ]
 	}
 	{ rank=same; 1990
-		//...
+		GEPEK [ label = "A dzsungel könyve szereplőiről\nelnevezett szerverek" ]
 	}
 	{ rank=same; 1991
 		//...
 	}
 	{ rank=same; 1992
-		BALU1 [ label = "Balu1" ]
+		BALU1 [ label = "Balu\nScounty" ]
+		BAGIRA [ label = "Bagira\n(Motorola 68xx, UNIX)" ]
 	}
 	{ rank=same; 1993
 		NET2 [ label = "Internet szolgáltatás kezdete" ]
@@ -96,9 +102,10 @@ digraph timeline {
 	}
 	{ rank=same; 1994
 		NET3 [ label = "UTP gerinchálózat \nkiépítésének kezdete" ]
+		SIRKAN [ label = "Sirkán\nNovell" ]
 	}
 	{ rank=same; 1995
-		BALU2 [ label = "Balu2" ]
+		BALU2 [ label = "Balu2\nDigital" ]
 	}
 	{ rank=same; 1996
 		BALU3 [ label = "Balu Sun OS" ]
@@ -160,20 +167,22 @@ digraph timeline {
 	
 	// Csoport összekötések
 	KSZKAlapitas -> CoderTeam;
-	KSZKAlapitas -> R5_BASIC;
-	KSZKAlapitas -> SEJTPROC;
-	KSZKAlapitas -> NET1;
-	KSZKAlapitas -> BALU1;
+	KSZKAlapitas -> HASZNALAT;
+	KSZKAlapitas -> SEJTPROC -> SEJTPROC_TANF;
+	KSZKAlapitas -> NET1 -> NET2 -> NET3 ->NET4 ->NET5 ->NET6;
+	KSZKAlapitas -> GEPEK;
 	KSZKAlapitas -> Ascote;
 	KSZKAlapitas -> KOLTOZES;
 	KSZKAlapitas -> VILAGURALOM;
 	KSZKAlapitas -> KONYVTAR;
-	
-	R5_BASIC -> R5_MEM;
-	R5_BASIC -> COMMODORE;
-	SEJTPROC -> SEJTPROC_TANF;
-	BALU1 -> BALU2 -> BALU3 -> BALU4;
-	NET1 -> NET2 -> NET3 ->NET4 ->NET5 ->NET6;
+	KSZKAlapitas -> FAZIS1 -> FAZIS2;
+	HASZNALAT -> ZX81 -> ZX_SPECTRUM;
+	HASZNALAT -> EMG;
+	HASZNALAT -> R5_BASIC -> R5_MEM;
+	HASZNALAT -> COMMODORE;
+	GEPEK -> BAGIRA;	
+	GEPEK -> SIRKAN;
+	GEPEK -> BALU1 -> BALU2 -> BALU3 -> BALU4;
 	NET2 -> NETWATCHER;
 	NET5 -> SCHACC;
 }
