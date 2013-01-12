@@ -1,5 +1,7 @@
 digraph timeline {
 
+	size = "5,40"
+
 	// Évek
 	node [
 		fontsize = 32,
@@ -14,5 +16,124 @@ digraph timeline {
 	2006 -> 2007 -> 2008 -> 2009 -> 2010 -> 2011;
 	2011 -> 2012 -> jövő;
 
+	// Események
+	node [
+		fontsize = 20,
+		shape = box
+	];
 	// Események, évek szerint
+	{ rank=same; 1976
+		KSZKAlapitas [ label = "KSZK Alapítása" ]
+	}
+	{ rank=same; 1977
+		Ascote [ label = "Ascote lyukszalagíró" ]
+	}
+	{ rank=same; 1978
+		//...
+	}
+	{ rank=same; 1979
+		//...
+	}
+	{ rank=same; 1980
+		//...
+	}
+	{ rank=same; 1981
+		//...
+	}
+	{ rank=same; 1982
+		//...
+	}
+	{ rank=same; 1983
+		//...
+	}
+	{ rank=same; 1984
+		//...
+	}
+	{ rank=same; 1985
+		//...
+	}
+	{ rank=same; 1986
+		//...
+	}
+	{ rank=same; 1987
+		//...
+	}
+	{ rank=same; 1988
+		//...
+	}
+	{ rank=same; 1989
+		//...
+	}
+	{ rank=same; 1990
+		//...
+	}
+	{ rank=same; 1991
+		//...
+	}
+	{ rank=same; 1992
+		//...
+	}
+	{ rank=same; 1993
+		//...
+	}
+	{ rank=same; 1994
+		//...
+	}
+	{ rank=same; 1995
+		//...
+	}
+	{ rank=same; 1996
+		//...
+	}
+	{ rank=same; 1997
+		//...
+	}
+	{ rank=same; 1998
+		//...
+	}
+	{ rank=same; 1999
+		//...
+	}
+	{ rank=same; 2000
+		//...
+	}
+	{ rank=same; 2001
+		//...
+	}
+	{ rank=same; 2002
+		//...
+	}
+	{ rank=same; 2003
+		//...
+	}
+	{ rank=same; 2004
+		//...
+	}
+	{ rank=same; 2005
+		//...
+	}
+	{ rank=same; 2006
+		//...
+	}
+	{ rank=same; 2007
+		//...
+	}
+	{ rank=same; 2008
+		//...
+	}
+	{ rank=same; 2009
+		CoderTeam [ label = "Coder Team alapítása" ]
+	}
+	{ rank=same; 2010
+		//...
+	}
+	{ rank=same; 2011
+		//...
+	}
+	{ rank=same; 2012
+		//...
+	}
+	
+	// Csoport összekötések
+	KSZKAlapitas -> CoderTeam;
 }
