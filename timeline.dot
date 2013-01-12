@@ -46,16 +46,16 @@ digraph timeline {
 		Ascote [ label = "Ascote lyukszalagíró" ]
 	}
 	{ rank=same; 1978
-		R5_BASIC [ label = "R5 BASIC beszerzése" ]
+		R5_BASIC [ label = "R5 BASIC számítógépek beszerzése \n amit a kollégisták használhatnak" ]
 	}
 	{ rank=same; 1979
-		R5_MEM [ label = "R5 memóriabővítése" ]
+		R5_MEM [ label = "R5 memóriabővítés" ]
 	}
 	{ rank=same; 1980
 		//...
 	}
 	{ rank=same; 1981
-		//...
+		KOLTOZES [ label = "Költözés" ]
 	}
 	{ rank=same; 1982
 		//...
@@ -67,19 +67,19 @@ digraph timeline {
 		//...
 	}
 	{ rank=same; 1985
-		//...
+		COMMODORE [ label = "Commodore 64 gépek\nbeszerzése" ]
 	}
 	{ rank=same; 1986
 		//...
 	}
 	{ rank=same; 1987
-		SEJTPROC_TANF [ label = "\"Sejtprocesszor Szakkolégium\" tanfolyam" ]
+		SEJTPROC_TANF [ label = "\"Sejtprocesszor Szakkolégium\" \ntanfolyam indítása" ]
 	}
 	{ rank=same; 1988
 		//...
 	}
 	{ rank=same; 1989
-		//...
+		NET1 [ label = "Koaxkábel hálózat kiépítése \n(10M)" ]
 	}
 	{ rank=same; 1990
 		//...
@@ -91,10 +91,11 @@ digraph timeline {
 		BALU1 [ label = "Balu1" ]
 	}
 	{ rank=same; 1993
-		//...
+		NET2 [ label = "Internet szolgáltatás kezdete" ]
+		KONYVTAR [ label = "Szoftverkönyvtár indítása\n(szoftverek, könyv ritkaságok)" ]
 	}
 	{ rank=same; 1994
-		//...
+		NET3 [ label = "UTP gerinchálózat \nkiépítésének kezdete" ]
 	}
 	{ rank=same; 1995
 		BALU2 [ label = "Balu2" ]
@@ -103,7 +104,8 @@ digraph timeline {
 		BALU3 [ label = "Balu Sun OS" ]
 	}
 	{ rank=same; 1997
-		//...
+		NET4 [ label = "Hálózatépítés vége, \nKalpana switch beszerzése" ]
+		NETWATCHER [ label = "Netwatcher üzembe helyezése" ]
 	}
 	{ rank=same; 1998
 		//...
@@ -119,12 +121,14 @@ digraph timeline {
 	}
 	{ rank=same; 2002
 		BALU4 [ label = "SUN-ONE" ]
+		NET5 [ label = "Cisco 65000 alapú hálózat kiépítésének kezdete" ]
 	}
 	{ rank=same; 2003
 		//...
 	}
 	{ rank=same; 2004
-		//...
+		NET6 [ label = "Cisco 65000 hálózat\nkiépítésének vége" ]
+		SCHACC [ label = "SchAccount bevezetése" ]
 	}
 	{ rank=same; 2005
 		//...
@@ -150,10 +154,26 @@ digraph timeline {
 	{ rank=same; 2012
 		//...
 	}
+	{ rank=same; jövő
+		VILAGURALOM [ label = "Világuralomra törés,\nemberiség leigázása" ]	
+	}
 	
 	// Csoport összekötések
 	KSZKAlapitas -> CoderTeam;
+	KSZKAlapitas -> R5_BASIC;
+	KSZKAlapitas -> SEJTPROC;
+	KSZKAlapitas -> NET1;
+	KSZKAlapitas -> BALU1;
+	KSZKAlapitas -> Ascote;
+	KSZKAlapitas -> KOLTOZES;
+	KSZKAlapitas -> VILAGURALOM;
+	KSZKAlapitas -> KONYVTAR;
+	
 	R5_BASIC -> R5_MEM;
+	R5_BASIC -> COMMODORE;
 	SEJTPROC -> SEJTPROC_TANF;
 	BALU1 -> BALU2 -> BALU3 -> BALU4;
+	NET1 -> NET2 -> NET3 ->NET4 ->NET5 ->NET6;
+	NET2 -> NETWATCHER;
+	NET5 -> SCHACC;
 }
