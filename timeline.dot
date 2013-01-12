@@ -3,6 +3,7 @@ digraph timeline {
 	size = "5,40"
 
 	// Évek
+//asd
 	node [
 		fontsize = 24,
 		fontname = "CMU Typewriter Text",
