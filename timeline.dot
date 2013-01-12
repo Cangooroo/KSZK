@@ -46,10 +46,10 @@ digraph timeline {
 		Ascote [ label = "Ascote lyukszalagíró" ]
 	}
 	{ rank=same; 1978
-		//...
+		R5_BASIC [ label = "R5 BASIC beszerzése" ]
 	}
 	{ rank=same; 1979
-		//...
+		R5_MEM [ label = "R5 memóriabővítése" ]
 	}
 	{ rank=same; 1980
 		//...
@@ -61,7 +61,7 @@ digraph timeline {
 		//...
 	}
 	{ rank=same; 1983
-		//...
+		SEJTPROC [ label = "Sejtprocesszor beszerzése" ]
 	}
 	{ rank=same; 1984
 		//...
@@ -73,7 +73,7 @@ digraph timeline {
 		//...
 	}
 	{ rank=same; 1987
-		//...
+		SEJTPROC_TANF [ label = "\"Sejtprocesszor Szakkolégium\" tanfolyam" ]
 	}
 	{ rank=same; 1988
 		//...
@@ -88,7 +88,7 @@ digraph timeline {
 		//...
 	}
 	{ rank=same; 1992
-		//...
+		BALU1 [ label = "Balu1" ]
 	}
 	{ rank=same; 1993
 		//...
@@ -97,10 +97,10 @@ digraph timeline {
 		//...
 	}
 	{ rank=same; 1995
-		//...
+		BALU2 [ label = "Balu2" ]
 	}
 	{ rank=same; 1996
-		//...
+		BALU3 [ label = "Balu Sun OS" ]
 	}
 	{ rank=same; 1997
 		//...
@@ -118,7 +118,7 @@ digraph timeline {
 		//...
 	}
 	{ rank=same; 2002
-		//...
+		BALU4 [ label = "SUN-ONE" ]
 	}
 	{ rank=same; 2003
 		//...
@@ -153,4 +153,7 @@ digraph timeline {
 	
 	// Csoport összekötések
 	KSZKAlapitas -> CoderTeam;
+	R5_BASIC -> R5_MEM;
+	SEJTPROC -> SEJTPROC_TANF;
+	BALU1 -> BALU2 -> BALU3 -> BALU4;
 }
