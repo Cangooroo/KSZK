@@ -153,17 +153,23 @@ digraph timeline {
 		CoderTeam [ label = "Coder Team alapítása", fillcolor="#729fcf", fontcolor="#ffffff" ]
 	}
 	{ rank=same; 2010
+		CoderMB1 [ label = "Mandelbrot projekt", fillcolor="#729fcf", fontcolor="#ffffff" ]
+		CoderMB2 [ label = "Mandelbrot2 projekt", fillcolor="#729fcf", fontcolor="#ffffff" ]
 		CoderAmoba [ label = "Amőba projekt", fillcolor="#729fcf", fontcolor="#ffffff" ]
 		CoderChaos [ label = "Chaos szerver", fillcolor="#729fcf", fontcolor="#ffffff" ]
 	}
 	{ rank=same; 2011
-		//...
+		CoderMB3 [ label = "SFMLMandelbrot projekt", fillcolor="#729fcf", fontcolor="#ffffff" ]
 	}
 	{ rank=same; 2012
+		CoderMB4 [ label = "MandelMandelBrot GPGPU alapokon", fillcolor="#729fcf", fontcolor="#ffffff" ]
 		CoderFractal [ label = "Fractal szerver", fillcolor="#729fcf", fontcolor="#ffffff" ]
 		CoderBBRC [ label = "RC autó projekt", fillcolor="#729fcf", fontcolor="#ffffff" ]
+		CoderFloppy [ label = "Zenélő floppy meghajtók", fillcolor="#729fcf", fontcolor="#ffffff" ]
 	}
 	{ rank=same; jövő
+		CoderFlipIT [ label = "FlipIt implementáció", fillcolor="#729fcf", fontcolor="#ffffff" ]
+		CoderMX [ label = "Mátrix", fillcolor="#729fcf", fontcolor="#ffffff" ]
 		VILAGURALOM [ label = "Világuralomra törés,\nemberiség leigázása" ]	
 	}
 	
@@ -190,6 +196,10 @@ digraph timeline {
 	// Coder Team események
 	CoderTeam -> CoderAmoba
 	CoderTeam -> CoderBBRC
+	CoderTeam -> CoderFloppy
+	CoderTeam -> CoderFlipIT
+	CoderTeam -> CoderMX
+	CoderTeam -> CoderMB1 -> CoderMB2 -> CoderMB3 -> CoderMB4
 	CoderTeam -> CoderChaos -> CoderFractal
 	
 }
