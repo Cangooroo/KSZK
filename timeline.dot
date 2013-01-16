@@ -150,37 +150,56 @@ digraph timeline {
 		//...
 	}
 	{ rank=same; 2009
-		CoderTeam [ label = "Coder Team alapítása", fillcolor="#729fcf", fontcolor="#ffffff" ]
+		CoderTeam [ label = "Coder Team\nalapítása", fillcolor="#729fcf", fontcolor="#ffffff" ]
+		SECURITY [ label = "SecuriTeam alapítás", fillcolor="#C41E3A", fontcolor="#ffffff" ]
 	}
 	{ rank=same; 2010
-		CoderMB1 [ label = "Mandelbrot projekt", fillcolor="#729fcf", fontcolor="#ffffff" ]
+		CoderMB1 [ label = "Mandelbrot\nprojekt", fillcolor="#729fcf", fontcolor="#ffffff" ]
 		CoderMB2 [ label = "Mandelbrot2 projekt", fillcolor="#729fcf", fontcolor="#ffffff" ]
 		CoderAmoba [ label = "Amőba projekt", fillcolor="#729fcf", fontcolor="#ffffff" ]
 		CoderChaos [ label = "Chaos szerver", fillcolor="#729fcf", fontcolor="#ffffff" ]
+		GAME1 [ label = "GameDev alapítás", fillcolor="#3B7A57", fontcolor="#ffffff" ]
+		GAME_INF [ label = "Infestation\n(játék)", fillcolor="#3B7A57", fontcolor="#ffffff" ]
+		WARGAME1 [ label = "Wargame tervezése", fillcolor="#C41E3A", fontcolor="#ffffff" ]
 	}
 	{ rank=same; 2011
-		CoderMB3 [ label = "SFMLMandelbrot projekt", fillcolor="#729fcf", fontcolor="#ffffff" ]
+		CoderMB3 [ label = "SFMLMandelbrot\nprojekt", fillcolor="#729fcf", fontcolor="#ffffff" ]
+		ADMIN1 [ label = "Admin.sch rendszer fejlesztése\n.NET platformon" ]
+		GAME_EGY [ label = "Egyeske\n(játék)", fillcolor="#3B7A57", fontcolor="#ffffff" ]
+		GAME_WAR1 [ label = "Warlock\n(játék)", fillcolor="#3B7A57", fontcolor="#ffffff" ]
+		MOBIL [ label = "MobiliTeam\nalapítása", fillcolor="#872657", fontcolor="#ffffff" ]
+		WARGAME2 [ label = "Wargame a Qpa része", fillcolor="#C41E3A", fontcolor="#ffffff" ]
 	}
 	{ rank=same; 2012
-		CoderMB4 [ label = "MandelMandelBrot GPGPU alapokon", fillcolor="#729fcf", fontcolor="#ffffff" ]
+		CoderMB4 [ label = "MandelMandelBrot\nGPGPU alapokon", fillcolor="#729fcf", fontcolor="#ffffff" ]
+		ADMIN2 [ label = "Admin.sch \nPHP platformon" ]
 		CoderFractal [ label = "Fractal szerver", fillcolor="#729fcf", fontcolor="#ffffff" ]
 		CoderBBRC [ label = "RC autó projekt", fillcolor="#729fcf", fontcolor="#ffffff" ]
-		CoderFloppy [ label = "Zenélő floppy meghajtók", fillcolor="#729fcf", fontcolor="#ffffff" ]
+		CoderFloppy [ label = "Zenélő floppy\nmeghajtók", fillcolor="#729fcf", fontcolor="#ffffff" ]
+		NET7 [ label = "SCHNET felújítása \n(10Gbps geric, 1Gbps végpontok)" ]
+		GAME_HEN1 [ label = "HENTES\n(játék)", fillcolor="#3B7A57", fontcolor="#ffffff" ]
+		WARGAME3 [ label = "Wargame külföldi megrendelésre", fillcolor="#C41E3A", fontcolor="#ffffff" ]
+		CTF1 [ label = "CTF keretrendszer\ntervezése", fillcolor="#C41E3A", fontcolor="#ffffff"  ]
+		SEC_ELOADAS [ label = "Alapozó előadások", fillcolor="#C41E3A", fontcolor="#ffffff" ]
 	}
 	{ rank=same; jövő
 		CoderFlipIT [ label = "FlipIt implementáció", fillcolor="#729fcf", fontcolor="#ffffff" ]
-		CoderMX [ label = "Mátrix", fillcolor="#729fcf", fontcolor="#ffffff" ]
-		VILAGURALOM [ label = "Világuralomra törés,\nemberiség leigázása" ]	
+		CoderMX [ label = "Qpa Mátrix\nszoftver", fillcolor="#729fcf", fontcolor="#ffffff" ]
+		//VILAGURALOM [ label = "Világuralomra törés,\nemberiség leigázása" ]
+		GAME_WAR2 [ label = "Warlock\nprojekt folytatása", fillcolor="#3B7A57", fontcolor="#ffffff" ]	
+		GAME_HEN2 [ label = "HENTES\nprojekt folytatása", fillcolor="#3B7A57", fontcolor="#ffffff" ]
+		CTF2 [ label = "CTF keretrendszer\nmegvalósítása", fillcolor="#C41E3A", fontcolor="#ffffff" ]
 	}
 	
 	// KSZK események
+	KSZKAlapitas -> GEPEK;
 	KSZKAlapitas -> HASZNALAT;
 	KSZKAlapitas -> SEJTPROC -> SEJTPROC_TANF;
-	KSZKAlapitas -> NET1 -> NET2 -> NET3 ->NET4 ->NET5 ->NET6;
-	KSZKAlapitas -> GEPEK;
+	KSZKAlapitas -> NET1 -> NET2 -> NET3 ->NET4 ->NET5 -> NET6 -> NET7;
+	NET5 -> SCHACC -> ADMIN1 -> ADMIN2;
 	KSZKAlapitas -> Ascote;
 	KSZKAlapitas -> KOLTOZES;
-	KSZKAlapitas -> VILAGURALOM;
+	//KSZKAlapitas -> VILAGURALOM;
 	KSZKAlapitas -> KONYVTAR;
 	KSZKAlapitas -> FAZIS1 -> FAZIS2;
 	HASZNALAT -> ZX81 -> ZX_SPECTRUM;
@@ -191,7 +210,14 @@ digraph timeline {
 	GEPEK -> SIRKAN;
 	GEPEK -> BALU1 -> BALU2 -> BALU3 -> BALU4;
 	NET2 -> NETWATCHER;
-	NET5 -> SCHACC;
+
+	//GameDev
+	GAME1 -> GAME_INF;
+	GAME1 -> GAME_EGY;
+	GAME1 -> GAME_HEN1 -> GAME_HEN2;
+	GAME1 -> GAME_WAR1 -> GAME_WAR2;
+
+	
 	
 	// Coder Team események
 	CoderTeam -> CoderAmoba
@@ -201,5 +227,10 @@ digraph timeline {
 	CoderTeam -> CoderMX
 	CoderTeam -> CoderMB1 -> CoderMB2 -> CoderMB3 -> CoderMB4
 	CoderTeam -> CoderChaos -> CoderFractal
+	
+	//SecuriTeam
+	SECURITY -> WARGAME1 -> WARGAME2 -> WARGAME3;
+	SECURITY -> SEC_ELOADAS;
+	SECURITY -> CTF1 -> CTF2;
 	
 }
